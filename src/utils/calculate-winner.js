@@ -19,12 +19,9 @@ export const calculateWinner = (squares) => {
     return winner[0];
   }
 
-  // for (let i = 0; i < winningPositions.length; i++) {
-  //   const [a, b, c] = winningPositions[i];
+  if (!squares.includes(null)) {
+    throw "Error";
+  }
 
-  //   if (squares[a] && squares[a] === squares[b] && squares[a] === squares[c]) {
-  //     return squares[a];
-  //   }
-  // }
   return null;
 };

@@ -16,6 +16,6 @@ const Square = ( {value, handleClick, square, id, disabled} ) => {
     }
   };
 
-  return <button disabled={disabled} id={square} onClick={onClick} style={style}>{value}</button>;
+  return <button data-js-square disabled={disabled} id={square} onClick={onClick} style={style}>{value}</button>;
 };
 export default Square;
