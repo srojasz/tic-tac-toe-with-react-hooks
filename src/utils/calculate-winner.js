@@ -10,17 +10,16 @@ export const calculateWinner = (squares) => {
     [2, 4, 6],
   ];
 
-  const winner = winningPositions.filter((position) => {
-    const [a, b, c] = position;
-    return squares[a] && squares[a] === squares[b] && squares[a] === squares[c];
-  });
+  for (let i = 0; i < winningPositions.length; i++) {
+    const [a, b, c] = winningPositions[i];
 
-  if (winner.length > 0) {
-    return winner[0];
+    if (squares[a] && squares[a] === squares[b] && squares[a] === squares[c]) {
+      return squares[a];
+    }
   }
 
   if (!squares.includes(null)) {
-    throw "Error";
+    throw "No more squares left to click";
   }
 
   return null;
