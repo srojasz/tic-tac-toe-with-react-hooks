@@ -10,16 +10,4 @@ describe("Board", () => {
       <Board handleClick={handleClick} squares={squares} disabled={true} />
     );
   });
-  // test("Board has 9 squares", () => {
-  //   const squares = document.QuerySelectorAll("[data-js-square]");
-  //   const squaresNum = squares.length;
-  //   expect(squaresNum).toEqual(9);
-  // });
 });
-
-// test("renders Board and finds 9 squares", () => {
-//   render(<Board />);
-//   const squares = document.QuerySelectorAll("[data-js-square]");
-//   const squaresNum = squares.length;
-//   expect(squaresNum).toBe(9);
-// });
