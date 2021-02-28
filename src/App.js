@@ -46,6 +46,7 @@ const App = () => {
 
   return (
     <div style={style}>
+      <h1>Tic Tac Toe</h1>
       <Board
         handleClick={handleClick}
         squares={squares}
@@ -57,7 +58,9 @@ const App = () => {
           The winner is: <strong>{player}</strong>
         </p>
       ) : null}
-      {!squares.includes(null) ? <Reset handleReset={handleReset} /> : null}
+      {!squares.includes(null) && !aWinner ? (
+        <Reset handleReset={handleReset} />
+      ) : null}
     </div>
   );
 };
